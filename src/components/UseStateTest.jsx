@@ -10,6 +10,7 @@ import { Button } from 'react-bootstrap'
 
 // state = {
 //     name: 'Stefano' <-- noi andiamo direttamente a dichiarare questo
+//     counter: 0
 // }
 
 const UseStateTest = () => {
@@ -23,6 +24,7 @@ const UseStateTest = () => {
   // "set" + il nome del primo elemento
   // il valore iniziale della variabile di stato viene passato come argomento
   // a useState
+  const [counter, setCounter] = useState(0)
 
   return (
     <div>
@@ -33,6 +35,9 @@ const UseStateTest = () => {
       >
         CAMBIAMI
       </Button>
+      <h2 onClick={() => setCounter(counter + 1)}>
+        COUNTER VALUE IS {counter}
+      </h2>
     </div>
   )
 }
